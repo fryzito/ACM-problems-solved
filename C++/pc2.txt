@@ -1,0 +1,11 @@
+1. Crear una conexión de red entre todos los equipos que se usarán para el concurso.
+2. Configurar la orden javac para que desde linea de comandos puedan invocarla (esto es lo principal porque pc^2 esta hecho en java y si no se puede ejecutar la órden javac desde linea de comandos no se ejecturá nada)
+3. Configurar el archivo pc2v9.ini que debería de estar en "~./pc2-9.1.6/bin/" allí se pone la ip del equipo Juez
+4. Configurar el pc^2 solo en el juez para el concurso en sí:
+   * Crear las cuentas de los jueces, administradores, sites, clientes o participantes, etc.
+   * Configurar el tiempo de duración del concurso (no pudimos lograr que se congele 1 hora antes así que si lo logran les pido que posteen su solución)
+   * Configurar los lenguajes de programación, especialmente deben de preocuparse en dar las órdenes correctas para que estos puedan ser compilados en consola, por ejemplo:
+        ** javac, fpas, csc, g++, gcc (consulten el archivo que compartí, alli encontrarán algunos ejemplos)
+        ** Configurar los problemas (input, output, tiempo, etc)
+
+5. Llevar a cabo una prueba general, y listo a realizar el concurso.
