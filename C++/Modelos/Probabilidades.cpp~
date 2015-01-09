@@ -1,0 +1,7 @@
+#include <cstdio>
+#include <algorithm>
+usinf namespace std;
+int main(){
+  
+  return 0;
+}

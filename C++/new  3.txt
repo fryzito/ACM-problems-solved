@@ -1,0 +1,12 @@
+#include<iostream>
+#include<cstedio>
+
+using namespace std;
+int main(){
+	char caracter;
+	char string[10000];
+	while(cin>>caracter){
+		
+	}
+	cout<<
+}
