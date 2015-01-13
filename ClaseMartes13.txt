@@ -1,0 +1,53 @@
+	// Binary search
+	low=0;hi=1;
+	while(low +1 < hi){
+		mid = (low+hi) /2;
+		if(funcion){
+			low = mid;
+		} else {
+			hi = mid;
+		}
+	}
+	return hi;
+
+
+	// ternary search
+
+
+	// BIT - Binary Indexed Tree
+	todo numero se puede representar com la suma de potencias de 2
+	tree[i]	= representa la suma desde la posicion i-2^r + 1 hasta i
+	donde r es la posicion de bit menos significativo.
+	// bit menos significativo (x & -x) existe una demostracion TC
+	// algoritmo para leer la suma acumulada desde inicio hasta i
+	int read(int n){
+		while(n){
+			suma += tree[n];
+			n -= (n&-n);
+		}
+		return sum;
+	}
+	int update(int n, int val){
+		while(n < maxval){
+			tree[n]+= val;
+			n+=(n&-n);
+		}
+	}
+
+	// consulta sin acumulado solo lo que te sirve 
+	// como buscar un elemento en el arbol 
+	// Binary Search en un Bit preguntando para arriba o para abajo, 
+	// BIT doble para responder consultas en dos dimenciones dinamico es un BIT de  BITs
+	int read(int x,int y){
+		while(y){
+				int xp = x;
+				whilek(xp){
+					sum += tree[y][xp];
+					xp -= (xp & -xp);
+				}
+				y -= (y & -y);
+		}
+		return sum;
+	}
+
+
