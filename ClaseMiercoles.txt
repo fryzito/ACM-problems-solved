@@ -1,0 +1,45 @@
+Dijkstra 
+
+#include <queue>
+Dijsktra (s,z)
+priority_queue<pair<int,int > >
+memset(dist,127,sizeof dist); // Numeros grandes
+dist[s]=0; //s vertice en el cual se va empezar
+q.push(mp(0,s));
+while(!q.empty()){
+	cr=-q.top().f;
+	r=q.top().s;
+	q.pop();
+	in t e delta^out do:
+	if(dist[r]+c[r,z]<dist[t]){
+		dist[t]=dist[t]+c[r,z]
+		q.push(mp(-dist[r],t));
+	}
+}
+// something like that
+// para  ciclos negativos Belmand ford
+// Bellman Ford
+
+vector<pair<pair<int,int>>> G;
+Bellman_ford(s,t)
+	memset(dist,127,sizeof dist);
+	dist[s]=0;
+	for (i=0;i<n-1;i++)
+		for(j=0;j<G.size();j++)
+			if(dist[G[j].f.f]+G[j].s < dist[G[j]].f.s) {
+				dist[G[j]].f.s = dist[G[j].f.f]+G[j].s ;
+			}
+		}
+	// comprobamos si hay ciclos negativo
+    for (u, v) ∈ E[G] do
+        if distancia[v] > distancia[u] + peso(u, v) then
+            print ("Hay ciclo negativo")
+            return FALSE
+    return TRUE
+
+// O(VE)
+// para verificar si existen ciclos negativos es el mismo algoritmo 
+// en vez de actualizar la distancia se dice si existe un ciclo 
+// Si no se tiene ciclos negativos se puede resolver el mismo problema 
+// con una complegidad O(N^2*logN) aplicando dijkstra
+// 
