@@ -1,0 +1,41 @@
+
+// RMQ: Range Minimun Query O(sqrt(n))
+ Partir el arreglo en sqrt partes y buscar complegidad sqrt(n) + 2*sqrt(n)
+
+
+// Sparse Table
+	for i hasta log(n)
+		for j hasta n
+			if(i==0) M[i][j] = A[j];
+			else M[i][j] = min(M[i][j-1],M[i-1][j+2^i]);
+// Segment Tree
+
+	
+// LCA con RMQ en una tabla 
+	para subir en el arbol se utiliza el principio de que cada numero 
+	se puede representar como la suma de las potencias de 2
+	for(i=log(n);i>=0;i--){
+		if(p[u][i]=p[v][i]&&p[u][i]!=-1){
+			u = p[u][i];
+			v = p[v][i];
+		}
+	}
+
+// Persistent Segments Trees 
+construccion de un segment tree con punteros 
+
+
+
+// para maper numero en un intervalo 
+100 200 600 555 ... 10000
+for(int i=0;i<n;i++){
+	cin >> A[i];
+	M[A[i]]++;
+}
+for(iterator it=M.begin();it!=M.end();it++){
+	M[it->first]=j;
+	p[j]=M[it->fist];
+}
+f(x,k) = devuelve cuantos numeros k<= exiten desde la raiz hasta x 
+s = f(u,t) + f(v,t) - f(lca(u,v),t) - f(p[lca(u,v)],t)
+
