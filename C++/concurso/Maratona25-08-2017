@@ -1,0 +1,41 @@
+Programacion Dinamica,
+Contest https://www.codepit.io/#/contest/599f90850542c1001db2349f/view
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+el problema es dada una secuencia de numeros , y dando un numero k menos al
+tamaño de la cadena, se pide cuantos subsecuencias de longitud k existen en
+
+len(Array) < 100
+
+k <= len(Array)
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Problema del viajante viajero,
+Es un problema factorial,
+con DP, se reduce a exponencial,
+
+
+Resolucion con programacion dinamica.
+
+Es necesario saber que sabiendo donde estuve y donde estoy puedo resolver el
+problema.
+
+Se pregunta dando un conjunto de vertices se quiere saber cual es la ruta
+mas barata para llegar a un vectice dado.
+
+Se define una funcio de recurrencia, R=min(DP[][] + C[][])
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Matriz con numero, es como un laberinto tiene una entrada y una salida,
+
+DP[i][j] = max (DP[i-1][j], DPi[][j-1]) + A[i][j];
+
+Para aplicar programacino dinamica en grafos el tiene que ser un DAG.
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Programacion dinamica con probabilidades :)
+
+
