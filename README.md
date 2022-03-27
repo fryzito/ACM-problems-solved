@@ -1,6 +1,11 @@
-# Association for Computing Machinery (ACM)
+# Competitive Programming Problems Solved
+
 Code Repository
-## Programming competition problems solved
+## ACM - ICPC
+Languages : 
+- C++
+- JavaScritp
+- Python
 ___
 
 
