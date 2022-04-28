@@ -1,0 +1,13 @@
+#include <cstdio>
+#include <iostream>
+using namespace std;
+int main() {
+	int n = 9;
+	for(int i=0; i<n; i++) {
+		for(int j=0;j<n;j++) {
+			printf(" %d",n-j+i-1);
+		}
+		printf("\n");
+	}
+	return 0;
+}

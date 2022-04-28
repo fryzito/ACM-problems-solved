@@ -1,5 +1,0 @@
-print (7>10)
-print (7<10)
-print (7==10)
-print (7!=4)
-print (4>=5)

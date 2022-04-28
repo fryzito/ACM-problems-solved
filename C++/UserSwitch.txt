@@ -1,8 +1,0 @@
-#include<cstdio>
-#inlcude<iostream>
-using namespace std;
-int main(){
-	int option;
-	cin >> option;
-	swi
-}
