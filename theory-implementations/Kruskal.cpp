@@ -24,6 +24,7 @@ int kruskal(vector<pair<int,pair<int,int> > > ejes, int n) {
 		u++;
 		t += ejes[i].first;
 		AGM.pb(mp(ejes[i].second.first,ejes[i].second.second));
+		//
 		if (u == n-1)
 			return t;
 		join(ejes[i].second.first,ejes[i].second.second);
@@ -32,21 +33,21 @@ int kruskal(vector<pair<int,pair<int,int> > > ejes, int n) {
 }
 
 int main() {
-	int na, w, ini, to, nodos;
+	int numeroAristas, weight, from, to, nodos;
 	scanf("%d",&nodos);
 	vector<pair<int,pair<int,int> > > aristas;
-	scanf("%d",&na);
-	for(int i = 0; i < na; ++i) {
-		scanf("%d %d %d",&w,&ini,&to);
-		aristas.pb(mp(w,mp(ini,to)));
+	scanf("%d",&numeroAristas);
+	for(int i = 0; i < numeroAristas; ++i) {
+		scanf("%d %d %d",&weight,&from,&to);
+		aristas.pb(mp(weight,mp(from,to)));
 	}
-	printf("Costo del AGM es: %d\n",kruskal(aristas,nodos));
-	
-	printf("El AGM tiene las siguientes aristas: \n");
+
+	printf("Costo del arbol recubridor costo minimo es: %d\n", kruskal(aristas,nodos));
+	printf("El arbol tiene las siguientes aristas: \n");
+	printf("Desde - hasta\n");
 
 	for(int i = 0; i < AGM.size(); ++i) {
-		printf("%d %d\n",AGM[i].first,AGM[i].second);
+		printf("%d %d\n",AGM[i].first,AGM[i].second,AGM[i]);
 	}
 	return 0;
 }
-
