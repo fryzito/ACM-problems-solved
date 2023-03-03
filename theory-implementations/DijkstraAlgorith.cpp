@@ -9,12 +9,13 @@
 #define dbg(x) cout << #x << " = " << x << endl;
 #define MAXN 1000
 using namespace std;
-int INF = 0;
+int INF = (1<<30);
 int n;
 int dist[MAXN];
 void Dijkstra(vector<pair<int,int> > lista[], int nodoInicial) {
 	bool toc[n];
-	memset(dist,120,sizeof(dist));
+	memset(dist,120,sizeof(dist)); // fill array with big num
+	//dbg(dist[0]);
 	memset(toc,0,sizeof(toc));
 	dist[nodoInicial] = 0;
 	int t = nodoInicial;
@@ -31,18 +32,20 @@ void Dijkstra(vector<pair<int,int> > lista[], int nodoInicial) {
 int main() {
 	int ini, to, w, nodoini;
 	cin >> n;
+	dbg(n);
 	vector<pair <int,int> > lista[n];
 	cin >> nodoini;
+	dbg(nodoini);
 	while (cin >> ini,cin >> to,cin >> w) {
 		lista[ini].push_back(make_pair(to,w));
-		lista[to].push_back(make_pair(ini,w));
-		INF += w;
+		//lista[to].push_back(make_pair(ini,w));
+		//INF += w;
 	}
 	
 	Dijkstra(lista,nodoini);
 	
 	for(int i = 0; i<n;i++) {
-		for(int j = 0; lista[i].size();j++)
+		for(int j = 0; j<lista[i].size();j++)
 			cout << lista[i][j].second << " ";
 		cout << endl;
 	}

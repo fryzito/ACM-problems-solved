@@ -33,9 +33,9 @@ int main() {
   for(int i = 1; i <= id; i++) {
     for (int j = 1; j <= remw; j++) {
       if (w[i] > j )
-	value[i][j] = value[i-1][j];
+        value[i][j] = value[i-1][j];
       else {
-	value[i][j] = max(value[i-1][j],v[i]+ value[i-1][j-w[i]]);
+        value[i][j] = max(value[i-1][j],v[i]+ value[i-1][j-w[i]]);
       }
     }
   }

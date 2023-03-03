@@ -9,6 +9,7 @@
 #define CLR(A,x) memset(A,x,sizeof(A))
 #define INF (1<<30)
 #define EPS (1e-9)
+#define ones(x) __builtin_popcount(x)
 #define ALL(v) (v).begin(),(v).end()
 #define RALL(v) (v).rbegin(),(v).rend()
 #define pb push_back
@@ -23,25 +24,27 @@
 #define SC(x)scanf("%d",&x)
 #define SC2(x,y)scanf("%d %d",&x,&y)
 #define P(x)printf("%d\n",x)
+#define SZ(v) v.size()
 #define f first
 #define s second
 #define MOD 100007
-#define MAXN 20000007
+#define MAXN 100005
 using namespace std;
-int primescount=1;
-int primes[MAXN+1];
-int sieve[MAXN+1];
+string i2s(int x) { stringstream ss; ss << x; return ss.str();}
+int s2i(string str) { istringstream ss(str);int nro; ss >> nro; return nro;}
 int main(){
-  for(int i=2;i<MAXN;i++){
-    if(!sieve[i]){
-      primes[primescount]=i;
-      sieve[i]=primescount;
-      primescount++;
-    }
-    for(int j=1;j<=sieve[i]&&i*primes[j]<=MAXN;j++)
-      sieve[i*primes[j]]=j;
+ 
+  int n;
+  S(n);
+  if(n&1)
+    printf("NO\n");
+  else{
+    if(n==2){
+      printf("NO\n");
+      return 0;
+    } else
+      printf("YES\n");
   }
-  REPN(i,1,10) dbg(primes[i]);
-  REPN(i,1,10) dbg(sieve[i]);
+  
   return 0;
 }
