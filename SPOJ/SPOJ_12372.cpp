@@ -36,8 +36,8 @@ int main(){
       SC(nro);
       sum+=nro;
       if(sum%100==0) {
-	cnt++;
-	sum=0;
+	      cnt++;
+	      sum=0;
       }
     }
     P(cnt);
