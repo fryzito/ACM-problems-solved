@@ -26,18 +26,18 @@ bool iscor(string str){
       pila.push(str[i]);
     } else {
       if(str[i]==')'){
-	if(!pila.empty()&&pila.top()=='('){
-	  pila.pop();
-	} else{
-	  return false;
-	}
+	      if(!pila.empty()&&pila.top()=='('){
+	        pila.pop();
+	      } else{
+	        return false;
+	      }
       } else {
-	// necesariamenet ]
-	if(!pila.empty()&&pila.top()=='['){
-	  pila.pop();
-	} else{
-	  return false;
-	}
+        // necesariamenet ]
+        if(!pila.empty()&&pila.top()=='['){
+          pila.pop();
+        } else{
+          return false;
+        }
       }
     }
   }

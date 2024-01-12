@@ -41,7 +41,7 @@ int main(){
     for(int j=1;j<=sieve[i]&&i*primes[j]<=MAXN;j++)
       sieve[i*primes[j]]=j;
   }
-  REPN(i,1,10) dbg(primes[i]);
-  REPN(i,1,10) dbg(sieve[i]);
+  REPN(i,1,10) dbg2(i,primes[i]);
+  REPN(i,1,10) dbg2(i,sieve[i]);
   return 0;
 }
