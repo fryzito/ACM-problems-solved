@@ -4,6 +4,8 @@
         "xstddef": "cpp",
         "utility": "cpp",
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "ostream": "cpp"
     }
 }
