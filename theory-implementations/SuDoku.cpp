@@ -24,7 +24,7 @@ void backtraking (int Colum,int fila, map<pair<int,int>, vector<int> > mapa) {
   if(Colum==n*n) {
     for(int i=0; i<n*n; i++) {
       for(int j=0; j<n*n; j++) {
-	printf("%d ",A[i][j]);
+	      printf("%d ",A[i][j]);
       }
       printf("\n");
     }
@@ -34,8 +34,8 @@ void backtraking (int Colum,int fila, map<pair<int,int>, vector<int> > mapa) {
   if(A[Colum][fila] == 0) {
     for(int number=1; number<=9; number++) {
       if(place(Colum,fila,number,mapa)) {
-	A[Colum][fila] = number;
-	backtraking(Colum,fila+1,mapa);
+	      A[Colum][fila] = number;
+	      backtraking(Colum,fila+1,mapa);
       }
     } 
   }
@@ -50,22 +50,23 @@ int main() {
     map<pair<int,int>,vector<int> > mapa;
     for(int i=0; i<size ; i++) {
       for(int j=0; j<size; j++) {
-	scanf("%d",&A[i][j]);	
-	mapa[mp(i/n,j/n)].pb(A[i][j]);
+	      scanf("%d",&A[i][j]);	
+	      mapa[mp(i/n,j/n)].pb(A[i][j]);
       }
     }
 
     backtraking(0,0,mapa);
-    //if(goal) {
+
+    if(goal) {
       for(int i=0; i<size ; i++) {
-	for(int j=0; j<size; j++) { 
-	  printf("%d ",A[i][j]);
-	}
-	printf("\n");
+        for(int j=0; j<size; j++) { 
+          printf("%d ",A[i][j]);
+        }
+	      printf("\n");
       }
-	// } else {
-	//   printf("NO SOLUTION\n");
-	// }
+    } else {
+      printf("NO SOLUTION\n");
+	  }
     
   }
   return 0;
