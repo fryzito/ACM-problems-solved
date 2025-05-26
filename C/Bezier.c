@@ -62,4 +62,3 @@ void ComputeBezier( Point2D* cp, int numberOfPoints, Point2D* curve ) {
     for( i = 0; i < numberOfPoints; i++)
         curve[i] = PointOnCubicBezier( cp, i*dt );
 }
-s
