@@ -1,3 +1,4 @@
+console.log('hola mundo primer programa en javascript puro');
 const readline = require('readline');
 
 const rl = readline.createInterface({
